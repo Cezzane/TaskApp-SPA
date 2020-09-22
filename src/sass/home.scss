@@ -1,0 +1,30 @@
+.home {
+  margin-top: 2vw;
+  h2 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 1vw;
+  }
+  h4 {
+    color: white;
+  }
+  hr {
+    border: solid white 1px;
+  }
+  .task,
+  .taskFinished {
+    padding: 20px;
+    h5 {
+      color: #40434e;
+    }
+  }
+  .card {
+    margin-bottom: 2vw;
+  }
+  textarea {
+    resize: none;
+  }
+  .btnSubmit {
+    background: #ffb347;
+  }
+}

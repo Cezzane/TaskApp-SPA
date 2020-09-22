@@ -1,0 +1,55 @@
+.hero {
+  transition: all ease-in 1s;
+  height: 600px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  span {
+    font-size: 100px;
+    color: #ffb347;
+  }
+
+  h1 {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+  }
+  p {
+    margin-top: 1vw;
+    color: #dff9fb;
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+  }
+  .boton {
+    font-family: $font1;
+    font-weight: 400;
+
+    &:hover {
+      background: #ffb347;
+      transform: translateY(-5px);
+    }
+    transition: transform linear 0.3s;
+    margin-top: 1vw;
+    background: #e0eafc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #cfdef3,
+      #e0eafc
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #cfdef3,
+      #e0eafc
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: rgb(47, 15, 77);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    outline: none;
+  }
+}

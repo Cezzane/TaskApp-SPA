@@ -1,18 +1,10 @@
 <div class="row">
   <h2 class="col-12">Dashboard</h2>
   <div class="col-md-3">
-    <div class="card task">
-      <h5 class="card-title">Task to do:</h5>
-      <p class="card-body"></p>
-    </div>
-    <div class="card taskFinished">
-      <h5 class="card-title">Task finished:</h5>
-      <p class="card-body"></p>
-    </div>
     <div class="taskForm card p-2">
-      <form class="card-body taskForm" action="">
+      <form class="card-body taskForm" id="taskForm" action="">
         <div class="form-group">
-          <label for="taskTitle">Task Title</label>
+          <label for="taskTitle">Task:</label>
           <input
             type="text"
             name=""
@@ -22,20 +14,17 @@
             required
           />
         </div>
-        <div class="form-group">
-          <label for="DEscription">Description</label>
-          <textarea
-            name=""
-            id="taskDescription"
-            cols="30"
-            rows="3"
-            class="form-control"
-            placeholder="Description"
-            requried
-          ></textarea>
-        </div>
+
         <input type="submit" class="btn btnSubmit w-100" value="Add Task" />
       </form>
+    </div>
+    <div class="card task">
+      <h5 class="card-title">Task to do:</h5>
+      <span class="card-body" id="tasks-todo">0</span>
+    </div>
+    <div class="card taskFinished">
+      <h5 class="card-title">Task finished:</h5>
+      <span class="card-body" id="tasks-finished">0</span>
     </div>
   </div>
   <div class="col-md-9">

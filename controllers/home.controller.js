@@ -6,16 +6,24 @@ export default () => {
   div.innerHTML = homeView;
   div.classList.add("home");
 
-  const taskForm = div
-    .querySelector(".taskForm")
-    .addEventListener("submit", (e) => {
-      const title = document.getElementById("taskTitle").value;
-      const description = document.getElementById("taskDescription").value;
-      e.preventDefault();
-      const task = new Tasks(title, description);
-      const ui = new UI();
-      ui.showTasks(task);
-      console.log(task);
-    });
+  div.querySelector(".taskForm").addEventListener("submit", (e) => {
+    /*Obtencion de Valores Input*/
+    const id = Tasks.incrementId();
+    console.log(id);
+    const title = document.getElementById("taskTitle").value;
+    //Instaciacion
+    const task = new Tasks(title, id);
+    const ui = new UI();
+    ui.addTasks(task);
+    ui.resetForm();
+    e.preventDefault();
+  });
+  const card = div.querySelector(".task-area");
+  card.addEventListener("click", (e) => {
+    const ui = new UI();
+    console.log("works");
+    ui.deleteTask(e.target);
+    ui.doneTask(e.target);
+  });
   return div;
 };
